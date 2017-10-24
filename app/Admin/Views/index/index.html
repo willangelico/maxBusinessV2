@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+
+{% block content %}
+	<h1>Dashboard - Páginas Inicial</h1>	
+
+
+	<form action="/admin/index" method="post" enctype="multipart/form-data">
+		<div class="col-xs-12 col-md-12">
+			<h2>Banner Principal</h2>
+			<div class="form-group">
+		    	<label for="banner_img">Imagem Principal</label>
+		    	<input type="file" class="filestyle" placeholder="Insira uma imagem" name="banner_img" id="banner_img" data-buttonText="Localizar arquivo">		    	   
+		    </div>	
+		    <div class="form-group">
+		    	<label for="banner_title">Título do Banner</label>
+		    	<input type="text" name="banner_title" class="form-control" id="banner_title" placeholder="Insira o Titulo do Banner" />		    	   
+		    </div>	
+		    <div class="form-group">
+		    	<label for="banner_txt">Chamada do Banner</label>
+		    	<input type="text" name="banner_txt" class="form-control" id="banner_txt" placeholder="Insira a Chamada do Banner" />		    	   
+		    </div>	
+		    <div class="form-group">
+		    	<label for="banner_btn_txt">CTA Botão</label>
+		    	<input type="text" name="banner_btn_txt" class="form-control" id="banner_btn_txt" placeholder="Insira o CTA do Botão" />		    	   
+		    </div>	
+		    <div class="form-group">
+		    	<label for="banner_btn_url">Url Destino do Botão</label>
+		    	<input type="text" name="banner_btn_url" class="form-control" id="banner_btn_url" placeholder="Insira a Url de Destino do Banner" />		    	   
+		    </div>	
+		    <hr>
+		    <!-- <h2>Texto Institucional</h2>
+		    <div class="form-group">
+		    	<label for="inst_txt">Texto Institucional</label>
+		    	<textarea name="inst_txt" id="inst_txt" class="form-control" rows="3" placeholder="Insira o texto Institucional"></textarea>
+		    </div>	
+		    <div class="form-group">
+		    	<label for="inst_btn_txt">CTA Botão</label>
+		    	<input type="text" name="inst_btn_txt" class="form-control" id="inst_btn_txt" placeholder="Insira o CTA do Botão" />		    	   
+		    </div>	
+		    <div class="form-group">
+		    	<label for="inst_btn_url">Url Destino do Botão</label>
+		    	<input type="text" name="inst_btn_url" class="form-control" id="inst_btn_url" placeholder="Insira a Url de Destino do Texto Institucional" />		    	   
+		    </div>	 -->
+		</div>
+		
+	
+
+	
+<!-- 
+	Cursos <br />
+	Texto Institucional<br />
+	Area do video<br />
+	Notícias<br />
+	Depoimentos<br>
+	Newsletter <br> -->
+
+		<footer>
+			<button type="submit" class="btn btn-primary"> Save</button>
+		</footer>
+	</form>
+{% endblock %}

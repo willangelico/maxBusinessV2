@@ -1,0 +1,11 @@
+.table-responsive {
+    clear: both;
+}
+
+.on {
+    color: green !important;
+}
+
+.off {
+    color: red !important;
+}

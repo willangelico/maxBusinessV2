@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{% block content %}
+	{% if message %}
+		{{ message }}
+	{% endif %}
+	<form action="/admin/pages/add" method="post" enctype="multipart/form-data">
+		<div class="col-xs-12 col-md-12">
+			<h2>Adicionar Página</h2>			
+		    <div class="form-group">
+		    	<label for="page_title">Título</label>
+		    	<input type="text" name="page_title" class="form-control" id="page_title" placeholder="Insira o Titulo do Banner" />		    	   
+		    </div>	
+		    <div class="form-group">
+		    	<label for="page_description">Chamada da Página</label>
+		    	<input type="text" name="page_description" class="form-control" id="page_description" placeholder="Insira a Chamada da Página" />		    	   
+		    </div>	
+		    <div class="form-group">
+	            <label for="page_content">Conteúdo</label>
+				<script type="text/javascript" src="/public/plugins/ckeditor/ckeditor.js"></script>			
+				<textarea name="page_content" id="page_content" class="form-control" rows="3"></textarea>
+				<script type="text/javascript">
+	            //<![CDATA[
+	                CKEDITOR.replace( 'page_content',
+	                    {
+	                        filebrowserBrowseUrl: '<?=HOME_URI;?>library/plugins/FileManager/index.html',
+	                        toolbar :
+	                        [
+	                            ['Source','RemoveFormat'],
+	                            ['Image','Flash','YouTube','Table','HorizontalRule','Smiley','SpecialChar'],
+	                            ['Maximize'],
+	                            ['Link','Unlink'],										
+	                            '/',
+	                            ['FontSize'],
+	                            ['Bold','Italic','Underline','Strike','Subscript','Superscript','TextColor','BGColor'],
+	                            ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+	                            ['NumberedList','BulletedList','Outdent','Indent','Blockquote']
+	                        ]
+	                    });
+	            //]]>
+	            </script>
+	        </div>
+		</div>
+		<footer>
+			<button type="submit" class="btn btn-primary">Salvar</button>
+		</footer>
+	</form>
+{% endblock %}

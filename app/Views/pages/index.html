@@ -1,0 +1,66 @@
+{% extends "index.html" %}
+
+{% block title %}
+	{{ name }} - Projuris Estudos Jurídicos
+{% endblock %}
+
+{% block content %}
+	{% block cursos %}
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{% for curso in contents.cursos %}
+					<div class="col-md-4">{{ curso.name }}</div>
+				{% endfor %}	
+			</div>			
+		</div>		
+	{% endblock %}
+
+	{% block about %}
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{{ content.config.about }}				
+			</div>			
+		</div>		
+	{% endblock %}
+
+	{% block video %}
+		<div class="row">
+			<div class="col-md-12">
+				{{ content.config.video }}
+			</div>			
+		</div>
+	{% endblock %}
+
+	{% block noticias %}
+		<div class="row">
+			<div class="col-md-12">
+				{{ content.config.noticias }}
+			</div>			
+		</div>
+	{% endblock %}
+
+	{% block depoimentos %}
+		<div class="row">
+			<div class="col-md-12">
+				{{ content.config.depoimentos }}
+			</div>			
+		</div>
+	{% endblock %}
+
+	{% block newsletter %}
+		<div class="row">
+			<div class="col-md-12">
+				{{ content.config.newsletter }}
+			</div>			
+		</div>
+	{% endblock %}
+
+	{% block contato %}
+		<div class="row">
+			<div class="col-md-12">
+				{{ content.config.contato }}
+			</div>			
+		</div>
+	{% endblock %}
+
+{% endblock %}
